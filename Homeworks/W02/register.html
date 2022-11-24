@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+      }
+
+      label {
+        display: block;
+      }
+
+      input {
+        margin-bottom: 5px;
+        width: unset;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Registration Form</h1>
+
+    <main>
+      <h4>Please fill out this form</h4>
+      <form>
+        <fieldset>
+          <legend>User Info</legend>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="8"
+            required
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact Info</legend>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
+          <small>Format: 8-777-777-7777</small>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Info</legend>
+          <div>
+            <p>Gender</p>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" />
+
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" />
+          </div>
+
+          <div>
+            <label for="start">Date of Birth</label>
+            <input
+              type="date"
+              id="start"
+              name="data-of-birth"
+              value="2000-01-01"
+              min="1900-01-01"
+              max="2022-01-01"
+            />
+          </div>
+
+          <div>
+            <label for="city">City</label>
+            <select id="city" name="city">
+              <option value="almaty">Almaty</option>
+              <option value="astana">Astana</option>
+              <option value="shymkent">Shymkent</option>
+              <option value="karaganda">Karaganda</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Terms & Conditions</legend>
+          <label for="terms">Terms</label>
+          <input type="checkbox" id="terms" name="terms" required />
+        </fieldset>
+
+        <button type="submit">
+          <a href="login.html" target="_blank">Register</a>
+        </button>
+      </form>
+    </main>
+  </body>
+</html>
